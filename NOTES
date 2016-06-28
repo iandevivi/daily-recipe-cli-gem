@@ -1,0 +1,39 @@
+How to Build a CLI Gem
+
+1.  Plan your gem, imagine the interface
+2.  Start with the project structure - use google
+3.  Start with the entry point - the file the user will run
+4.  Force that to build the CLI interface
+5.  Stub out the interface
+6.  Start making things real
+7.  Discover objects
+8.  Program
+
+- A command line interface for daily recipes
+- from http://www.foodnetwork.com/recipes/photos/recipe-of-the-day-what-to-cook-now.html
+  #body > div:nth-child(13) > div.row.split > article > div >
+  #div.list-featured-in-gallery.section > section > div > ul > li:nth-child(1)
+
+
+user types daily_recipes
+
+Shows a list of recipes
+
+1.  Herb Chicken - 1 hour 30 minutes cook time - 4.5/5 stars - 16 reviews
+2.  Guacamole - 5 stars - 783 reviews
+
+User picks a recipe by number
+  provides list of ingredients
+  provides cooking instructions
+
+  copy ingredients/recipe to clipboard? #copy method using pbcopy
+
+
+What is a recipe?
+
+A recipe has a name
+A recipe has a cook time
+A recipe has a rating
+A recipe has a number of reviews
+A recipe has ingredients
+A recipe has cooking instructions
