@@ -20,12 +20,12 @@ class DailyRecipe::Recipe
       y.name = x.search("h6 a").text
       y.cook_time = x.search("dd").text
       y.url = x.search(".community-rating-stars").attribute("href").value
-      y.rating = "5/7.  9/10 with rice"
+      y.rating = "  5/7  "
       recipes << y
     end
     recipes
   end
 
-    
+
 
 end

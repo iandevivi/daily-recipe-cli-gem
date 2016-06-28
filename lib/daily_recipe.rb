@@ -2,6 +2,7 @@
 require 'open-uri'
 require 'nokogiri' # add dependency to gemspec
 require 'pry'
+require 'terminal-table'
 
 
 require_relative "daily_recipe/version"

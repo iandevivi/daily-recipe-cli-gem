@@ -11,7 +11,7 @@ class DailyRecipe::CLI
   def list_recipes
     #will get recipes
     @recipes = DailyRecipe::Recipe.today
-    puts "    Recipe name     Rating      Cooking Time"
+    puts "    Recipe name                          Rating       Cooking Time"
     @recipes.each.with_index(1) do |recipe, i|  #There is a Recipe class with a #today method for today's recipes
 
       puts "#{i}. #{recipe.name} - #{recipe.rating} - #{recipe.cook_time}"
@@ -29,8 +29,8 @@ class DailyRecipe::CLI
 
       if input.to_i > 0
         the_recipe = @recipes[input.to_i-1]
-        puts "#{the_recipe.name} - #{the_recipe.rating} - #{the_recipe.cook_time}"
-        #clear #provide more information about the recipe 
+        puts "#{the_recipe.name} -       #{the_recipe.rating} -        #{the_recipe.cook_time}"
+        #clear #provide more information about the recipe
       elsif input == "list"
         list_recipes
       elsif input == "exit"
