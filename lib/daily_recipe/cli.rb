@@ -30,6 +30,7 @@ class DailyRecipe::CLI
       if input.to_i > 0
         the_recipe = @recipes[input.to_i-1]
         puts "#{the_recipe.name} - #{the_recipe.rating} - #{the_recipe.cook_time}"
+        #clear #provide more information about the recipe 
       elsif input == "list"
         list_recipes
       elsif input == "exit"
