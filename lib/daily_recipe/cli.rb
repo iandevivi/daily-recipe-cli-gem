@@ -29,7 +29,9 @@ class DailyRecipe::CLI
 
       if input.to_i > 0
         the_recipe = @recipes[input.to_i-1]
-        puts "#{the_recipe.name} -       #{the_recipe.rating} -        #{the_recipe.cook_time}"
+        DailyRecipe::Recipe.scrape_full_recipe(the_recipe)
+        #scrape_full_recipe(the_recipe.url)
+        #puts "#{the_recipe.name} -       #{the_recipe.rating} -        #{the_recipe.cook_time}"
         #clear #provide more information about the recipe
       elsif input == "list"
         list_recipes

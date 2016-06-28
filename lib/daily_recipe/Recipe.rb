@@ -3,13 +3,13 @@ class DailyRecipe::Recipe
   attr_accessor :name, :cook_time, :rating, :reviews, :url
 
   def self.today
-    self.scrape_recipes
-  end
-
-
-  def self.scrape_recipes
     self.scrape_food_network
   end
+
+
+  # def self.scrape_recipes
+  #   self.scrape_food_network
+  # end
 
   def self.scrape_food_network
     recipes = []
@@ -24,6 +24,25 @@ class DailyRecipe::Recipe
       recipes << y
     end
     recipes
+  end
+
+  def self.scrape_full_recipe(the_recipe)
+
+    doc = Nokogiri::HTML(open("http://www.foodnetwork.com"+the_recipe.url))
+    ingredients = doc.search("div.ingredients li")
+    puts ""
+    puts "Ingredients"
+    ingredients.each do |ingredient|
+      puts ingredient.text
+    end
+
+    cooking_instructions = doc.search("div.directions li")
+    cooking_instructions.each do |instruction|
+      puts ""
+      puts instruction.text
+    end
+    #ingredients.each {|ingredient| puts ingredient}
+    #cooking_instructions.each {|p| puts p}
   end
 
 
