@@ -3,6 +3,7 @@ PATH
   specs:
     daily_recipe (0.1.0)
       nokogiri
+      terminal-table
 
 GEM
   remote: https://rubygems.org/
@@ -20,6 +21,7 @@ GEM
       slop (~> 3.4)
     rake (10.4.2)
     slop (3.6.0)
+    terminal-table (1.6.0)
 
 PLATFORMS
   ruby

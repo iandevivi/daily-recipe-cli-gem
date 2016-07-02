@@ -1,8 +1,5 @@
 # DailyRecipe
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/daily_recipe`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+daily_recipe is a gem that will pull a changing recipe list, provide the user with the name, cook time and average rating of the recipe.  Selecting a recipe will give the user the ingredient list and the cooking directions.
 
 ## Installation
 
@@ -22,7 +19,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use this gem, install using 'gem install daily_recipe'.  
+To run, simply type 'daily_recipe' once the gem has been installed.
+A list of recipes will be loaded.  Select an option to get ingredients and cooking instructions.
 
 ## Development
 
@@ -38,4 +37,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
