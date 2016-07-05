@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
-require './lib/daily_recipe' 
+require 'require_all'
+
+require_rel '../lib'#'./lib/daily_recipe'
 
 DailyRecipe::CLI.new.call

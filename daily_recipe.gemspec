@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   #   raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
   # end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.files         = ["lib/daily_recipe.rb", "lib/daily_recipe/cli.rb", "lib/daily_recipe/Recipe.rb", "lib/daily_recipe/version.rb", "bin/daily_recipe", "bin/console", "bin/setup"] #`git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "bin"
   spec.executables   = ["daily_recipe"]
   spec.require_paths = ["lib"]
@@ -31,6 +31,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
 
   spec.add_development_dependency "pry"
+  spec.add_runtime_dependency "require_all" , '~> 1.3', '>= 1.3.3'
 
   spec.add_dependency "nokogiri"
   spec.add_dependency "terminal-table"

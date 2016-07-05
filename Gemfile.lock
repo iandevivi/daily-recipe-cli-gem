@@ -1,8 +1,9 @@
 PATH
   remote: .
   specs:
-    daily_recipe (0.1.0)
+    daily_recipe (0.2.2)
       nokogiri
+      require_all (~> 1.3, >= 1.3.3)
       terminal-table
 
 GEM
@@ -20,6 +21,7 @@ GEM
       method_source (~> 0.8.1)
       slop (~> 3.4)
     rake (10.4.2)
+    require_all (1.3.3)
     slop (3.6.0)
     terminal-table (1.6.0)
 
@@ -31,6 +33,7 @@ DEPENDENCIES
   daily_recipe!
   pry
   rake (~> 10.0)
+  require_all
 
 BUNDLED WITH
    1.12.5

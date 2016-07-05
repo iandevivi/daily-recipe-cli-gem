@@ -2,7 +2,7 @@ require 'json'
 class DailyRecipe::Recipe
 
   attr_accessor :name, :cook_time, :rating, :api_id, :url
-  BASE_URL = "http://www.foodnetwork.com"
+  @base_url = "http://www.foodnetwork.com"
   def self.today
     self.scrape_food_network
   end
@@ -15,7 +15,7 @@ class DailyRecipe::Recipe
       recipe.name = x.search("h6 a").text
       recipe.cook_time = x.search("dd").text
       recipe.api_id = (x.css("a.community-rating-stars").attribute("data-rating").value).scan(/\w+\-.+\w+/).join("-")
-      recipe.url = BASE_URL + x.search(".community-rating-stars").attribute("href").value
+      recipe.url = @base_url + x.search(".community-rating-stars").attribute("href").value
       recipe.rating = get_rating(recipe.api_id)
       recipes << recipe
     end
@@ -31,7 +31,7 @@ class DailyRecipe::Recipe
     parsed = JSON.parse(part2, symbolize_names: true)
     rating = parsed[:streamInfo][:avgRatings][:_overall]
     rating
-  end  #Parses JSON to get access to the gigya API info in order to scrape the ratings information.  
+  end  #Parses JSON to get access to the gigya API info in order to scrape the ratings information.
 
   def self.scrape_full_recipe(the_recipe)
 
